@@ -23,13 +23,13 @@ Captcha:
   Driver: digit
 
 DatabaseConf:
-  Type: mysql
+  Type: postgres
   Host: 127.0.0.1
-  Port: 3306
+  Port: 5432
   DBName: simple_admin
-  Username: # set your username
-  Password: # set your password
-  MaxOpenConn: 100
+  Username: postgres
+  Password: "123456"
+  MaxOpenConn: 10
   SSLMode: disable
   CacheTime: 5
 
@@ -71,11 +71,13 @@ RedisConf:
   Type: node
 
 CoreRpc:
-  Target: k8s://default/core-rpc-svc:9101
-  Enabled: true
+  Endpoints:
+    - 127.0.0.1:9101 # 与 Core RPC 地址相同
+  Enabled: true # 是否启用
 
 JobRpc:
-  Target: k8s://default/job-rpc-svc:9105
+  Endpoints:
+    - 127.0.0.1:9105 # 与 Job RPC 地址相同
   Enabled: false
 
 McmsRpc:

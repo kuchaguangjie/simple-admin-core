@@ -2,13 +2,13 @@ Name: core.rpc
 ListenOn: 0.0.0.0:9101
 
 DatabaseConf:
-  Type: mysql
+  Type: postgres
   Host: 127.0.0.1
-  Port: 3306
+  Port: 5432
   DBName: simple_admin
-  Username: # set your username
-  Password: # set your password
-  MaxOpenConn: 100
+  Username: postgres
+  Password: "123456"
+  MaxOpenConn: 10
   SSLMode: disable # disable or require
   CacheTime: 5
 

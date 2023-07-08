@@ -1,3 +1,8 @@
+### basic
+*.swp
+*~
+*.og
+
 # Build and Release Folders
 bin-debug/
 bin-release/
