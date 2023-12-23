@@ -15,7 +15,7 @@ DatabaseConf:
 Log:
   ServiceName: coreRpcLogger
   Mode: file
-  Path: /home/data/logs/core/rpc
+  Path: /mnt/star/data/simple-admin/logs/core/rpc
   Encoding: json
   Level: info
   Compress: false
